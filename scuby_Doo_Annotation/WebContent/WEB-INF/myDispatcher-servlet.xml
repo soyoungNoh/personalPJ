@@ -62,36 +62,36 @@
 		<property name="mdao" ref="memberDao"></property>
 	</bean> -->
 	
-	<bean name="/host/bManage.do"
+<!-- 	<bean name="/host/bManage.do"
 		class="com.doo.host.controller.BManageController">
 		<property name="mdao" ref="memberDao"></property>
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/host/businessAdd.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessAdd.do"
 		class="com.doo.host.controller.BusinessAddController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/host/businessAddProc.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessAddProc.do"
 		class="com.doo.host.controller.BusinessAddProcController">
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/host/businessEdit.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessEdit.do"
 		class="com.doo.host.controller.BusinessEditController">
 		<property name="bdao" ref="businessDao"></property>
 		<property name="mdao" ref="memberDao"></property>		
-	</bean>
-	<bean name="/host/businessEditProc.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessEditProc.do"
 		class="com.doo.host.controller.BusinessEditProcController">
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/host/businessDelProc.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessDelProc.do"
 		class="com.doo.host.controller.BusinessDelProcController">
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/host/businessDetail.do"
+	</bean> -->
+<!-- 	<bean name="/host/businessDetail.do"
 		class="com.doo.host.controller.BusinessDetailController">
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
+	</bean> -->
 	
 	<bean name="/reserve/rsvList.do"
 		class="com.doo.reserve.controller.ReserveListController">
