@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: 'Noto Sans KR';
+}
+
+.header {
+	font-family: 'Noto Sans KR';
+	width: 600px;
+	float: right;
+	font-size: 16px;
+	margin: 10px 0;
+}
+.mainBox {
+	margin: 50px 190px;
+}
+.title{
+	font-size: 50px; font-weight: bold; color:#404040; 
+}
+.subtilte{
+	font-size: 24px; color:#737373; 
+}
+.infoBox{
+	float:right; width:26%; border: 1px solid #d9d9d9; padding:40px;
+	
+}
+select {
+	width:100px;
+	height: 40px;
+	font-family: 'Noto Sans KR';
+	color: #666666;
+	border: 1px solid #999;
+	font-size: 22px;
+	margin: 0 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background:
+		url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+		no-repeat 95% 50%;
+}
+.payTool{
+	width:37%; float:left; height:46px; 
+	font-size: 24px; color:#737373
+}
+.dHr{
+	color:#bfbfbf; width:54%; float:left; border: 1px solid #d9d9d9;
+}
+.dHr2{
+	color:#bfbfbf; width:100%; float:middle; border: 1px solid #d9d9d9;
+	
+}
+.add{
+	width: 80px; height: 30px; margin:0 10px; font-size: 24px; color:#737373;
+}
+.cardForm{
+	width: 25%; float:left;
+}
+.cardBox{
+	float:left; width:44%; height:46px; margin:0 6px;
+	font-size: 24px; color:#737373
+}
+.cardForm2{
+	width:12%;; float:left; 
+}
+.cardBox2{
+	float:left; width:100%; height:46px;
+	font-size: 24px; color:#737373
+}
+.footerBox {
+	background-color: #000033; background-size: cover; 
+	width:100%; height:130px;
+}
+.footer {
+	padding: 30px 30px;
+	font-size: 15px;
+	color: #f2f2f2;
+}

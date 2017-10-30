@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: 'Noto Sans KR';
+}
+
+.header {
+	font-family: 'Noto Sans KR';
+	width: 600px;
+	float: right;
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.upper_menu {
+	float: right;
+	font-size: 16px;
+	margin: 20px 20px;
+	font-family: 'Noto Sans KR';
+}
+
+.addBImg {
+	float: right;
+	margin: 10px 0 40px 0;
+}
+
+.mono_table {
+    width: 55%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: none;
+    color: #000;
+}
+
+.mono_table th {
+    padding: 15px;
+    background: url(http://nanati.me/img/monoptn.gif);
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 1px #FFF;
+    font-size: 17px;
+}
+ 
+.mono_table td {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #000;
+    text-align: left;
+    vertical-align: baseline;
+    font-size: 17px;
+}
+
+.footerBox {
+	background-color: #000033; background-size: cover; 
+	width:100%; height:130px;
+}
+
+.footer {
+	padding: 30px 30px;
+	font-size: 15px;
+	color: #f2f2f2;
+}

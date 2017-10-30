@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body{
+	font-family: 'Noto Sans KR';	
+}
+ .upper_menu {
+    float: right; font-size: 16px;
+    margin: 20px 20px;
+  }
+  
+  .subTitle{
+  	font-family: 'Noto Sans KR'; font-size: 35px; color: #262626;
+  }
+  .loginBox{
+  	color: #666666; height: 40px; width: 200px;
+	border: 1px solid #999; margin: 10px;
+	font-size: 15px; margin: 0 10px;
+  }
+  .loginBox2{
+  	border: 1px solid #999999; padding: 30px 30px;
+	width: 350px; background-color: #e6e6e6;
+  }
+  .title{
+  	font-family: 'Noto Sans KR'; font-size: 45px; color: #4d4dff; font-weight: bolder;
+  }
+  
+  .searchBox{
+  	color: #666666; height: 40px; width: 200px;	font-family: 'Noto Sans KR';
+  	border: 1px solid #999; font-size: 15px; margin: 0 10px;
+  }
+   select{
+  	height: 44px; width: 200px; font-family: 'Noto Sans KR'; color: #666666;
+  	border: 1px solid #999; font-size: 15px; margin: 0 10px;
+  	-webkit-appearance: none; -moz-appearance: none; appearance: none;
+   	background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; 
+ }
+.footerBox {
+	background-color: #000033; background-size: cover; 
+	width:100%; height:130px;
+}
+  .footer{
+ 	padding: 40px 30px; font-size: 15px; color: #f2f2f2;
+ }
+
+ 
+ 
