@@ -45,10 +45,7 @@ public class JoinProcController implements Controller{
 		String name = request.getParameter("name");
 		String gender = request.getParameter("gender");
 		String age = request.getParameter("age");
-		String year = request.getParameter("year");
-		String month = request.getParameter("month");
-		String day = request.getParameter("day");
-		String birthday = String.format("%s-%s-%s", year, month,day);
+		String birthday = request.getParameter("birthday");
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
 		String email = request.getParameter("email");

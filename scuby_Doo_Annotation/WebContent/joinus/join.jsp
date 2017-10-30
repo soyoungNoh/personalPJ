@@ -6,6 +6,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="join.css">
 <title>Welcome to Scuby.Doo!</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	function validate(){
+		var birthday= $("#year").val()+"-"+$("#month").val()+"-"+$("#day").val();
+		$("#birthday").val(birthday);
+			
+	}
+
+</script>
 </head>
 
 <body>
@@ -16,7 +28,7 @@
 	
 	<img alt="seaSports" src="../images/seaSports5.jpg" style="width: 35%;" class="joinImg">
 	
-	<form action="joinProc.do" method="post">
+	<form action="joinProc.do" method="post" onsubmit="return validate()">
 	
 	<table>
 	<tr>
@@ -25,9 +37,10 @@
 	</tr>
 	<tr>
 	<th>생년월일</th>
-	<td><input type="text" value="년도" name="year" class="bBox"/>
-	<input type="text" value="월" name="month" class="bBox"/>
-	<input type="text" value="일" name="day" class="bBox"/>
+	<td><input type="text" value="년도" name="year" id="year" class="bBox"/>
+	<input type="text" value="월" name="month" id="month" class="bBox"/>
+	<input type="text" value="일" name="day" id="day" class="bBox"/>
+	<input type="hidden" name="birthday" id="birthday"/>
 	</td>
 	</tr>
 	<tr>

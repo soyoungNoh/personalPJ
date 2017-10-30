@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.sist.controller"></context:component-scan>
+    <context:component-scan base-package="com.doo.controller"></context:component-scan>
 	
 	<bean name="memberDao" class="com.doo.dao.MemberDAO"></bean>
 	
@@ -18,24 +18,24 @@
 <!-- 	<bean name="/joinus/login.do" 
 		class="com.doo.joinus.controller.LoginController">
 	</bean> -->
-	<bean name="/joinus/loginProc.do" 
+<!-- 	<bean name="/joinus/loginProc.do" 
 		class="com.doo.joinus.controller.LoginProcController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/logoutProc.do" 
+	</bean> -->
+<!-- 	<bean name="/logoutProc.do" 
 		class="com.doo.joinus.controller.LogoutProcController">
-	</bean>
-	<bean name="/joinus/join.do" 
+	</bean> -->
+<!-- 	<bean name="/joinus/join.do" 
 		class="com.doo.joinus.controller.JoinController">
-	</bean>
-	<bean name="/joinus/joinProc.do" 
+	</bean> -->
+<!-- 	<bean name="/joinus/joinProc.do" 
 		class="com.doo.joinus.controller.JoinProcController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/joinus/loginIndex.do"
+	</bean> -->
+<!-- 	<bean name="/joinus/loginIndex.do"
 		class="com.doo.joinus.controller.LoginIndexController">
 		<property name="bdao" ref="businessDao"></property>		
-	</bean>
+	</bean> -->
 	
 	<bean name="/myPage/memberList.do"
 		class="com.doo.myPage.controller.MemberListController">
