@@ -16,7 +16,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#rsvBtn").click(function(){
-		//alert("로그인을 해주세요.");
 
 		if(${!empty mmid}){
 			location.href = "../reserve/rsvPage.do?mid=${b.mid}";

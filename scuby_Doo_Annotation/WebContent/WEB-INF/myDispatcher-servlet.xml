@@ -93,23 +93,23 @@
 		<property name="bdao" ref="businessDao"></property>
 	</bean> -->
 	
-	<bean name="/reserve/rsvList.do"
+<!-- 	<bean name="/reserve/rsvList.do"
 		class="com.doo.reserve.controller.ReserveListController">
 		<property name="rdao" ref="reserveDao"></property>
-	</bean>
-	<bean name="/reserve/rsvPage.do"
+	</bean> -->
+<!-- 	<bean name="/reserve/rsvPage.do"
 		class="com.doo.reserve.controller.ReservePageController">
 		<property name="mdao" ref="memberDao"></property>	
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/reserve/rsvAddProc.do"
+	</bean> -->
+<!-- 	<bean name="/reserve/rsvAddProc.do"
 		class="com.doo.reserve.controller.ReserveAddProcController">
 		<property name="rdao" ref="reserveDao"></property>
-	</bean>
-	<bean name="/reserve/stateUpdateProc.do"
+	</bean> -->
+<!-- 	<bean name="/reserve/stateUpdateProc.do"
 		class="com.doo.reserve.controller.StateUpdateProcController">
 		<property name="rdao" ref="reserveDao"></property>
-	</bean>
+	</bean> -->
 	
 	<!-- <bean name="/util/stateUpdateProc.do"
 		class="com.doo.util.SdownloadContraller">

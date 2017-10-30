@@ -160,79 +160,58 @@ public class JoinusController {
 	}
 	
 	@RequestMapping("/joinus/joinProc.do")
-	public String joinProc(HttpServletRequest request, HttpServletResponse response, String pwd, String mid, String checkIdSave, String checkLoginSave){
+	public String joinProc(HttpServletRequest request,String mid, String pwd, String name, String gender, String age, String birthday, String phone, String address,
+				String email, String[] proper, String dist){
+		
+		String ServletContextA = request.getServletContext().getInitParameter("context-param-test");
+		System.out.println("ServletContextA : "+ ServletContextA);
+
 		try {
 			request.setCharacterEncoding("utf-8");
 		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		HttpSession session = request.getSession();
+
+
+		int iage = Integer.parseInt(age);
+		String properties = "";
 		
-		Member m = mdao.getMember(mid);
+		for(int i=0;i<proper.length;i++)
+		{
+			if(properties=="")
+				properties=proper[i];
+			else
+				properties=properties+','+proper[i];	
+		}
 		
-		if(m==null)
+		Member m = new Member();
+		m.setMid(mid);
+		m.setPwd(pwd);
+		m.setName(name);
+		m.setGender(gender);
+		m.setAge(iage);
+		m.setBirthday(birthday);
+		m.setPhone(phone);
+		m.setAddress(address);
+		m.setEmail(email);
+		m.setProper(properties);
+		m.setDist(dist);
+		
+		int af = mdao.addMember(m);
+		
+		ModelAndView mv = new ModelAndView();
+		if(af==1)
 		{
-			System.out.println("아이디가 존재하지 않습니다. 다시 입력하세요.");
-			return "login.jsp";
-
-		}else if(pwd.equals(m.getPwd()))
-		{
-			System.out.println(m.getName()+"님 환영합니다.");
-			//response.sendRedirect("welcomejoin.jsp?mid="+mid);
-
-			request.getSession().setAttribute("mid",mid);
-			request.getSession().setAttribute("dist",m.getDist());
-
-			
-			if(checkIdSave != null && !checkIdSave.equals("")){
-				Cookie ck = new Cookie("mid",mid);
-				ck.setMaxAge(60*60*24*30); 	//한달동안 쿠키 생존함.
-				System.out.println("아이디 저장 쿠키 생성");
-				response.addCookie(ck);
-			}else{
-				Cookie ck = new Cookie("mid",mid);
-				ck.setMaxAge(0); 	//쿠키 0초동안 생존 = 삭제
-				System.out.println("쿠키 삭제");
-				response.addCookie(ck);		
-			}
-
-			if(checkLoginSave != null && !checkLoginSave.equals("")){
-				Cookie ck2 = new Cookie("mid",mid);
-				Cookie ck3 = new Cookie("pwd",pwd);
-				ck2.setMaxAge(60*60*24*30); 	//한달동안 쿠키 생존함.
-				ck3.setMaxAge(60*60*24*30); 
-				System.out.println("로그인유지 쿠키 생성");
-				response.addCookie(ck2);
-				response.addCookie(ck3);
-			}else{
-				Cookie ck2 = new Cookie("mid",mid);
-				Cookie ck3 = new Cookie("pwd",pwd);
-				ck2.setMaxAge(0); 	//한달동안 쿠키 생존함.
-				ck3.setMaxAge(0); 
-				System.out.println("쿠키 삭제");
-				response.addCookie(ck2);
-				response.addCookie(ck3);	
-			}
-
-			String returnURL = (String)request.getSession().getAttribute("returnURL");
-			
-			if(returnURL != null && returnURL.equals(""))
-			{
-				String contextRootName = request.getContextPath();
-				System.out.println("contextRootName = "+contextRootName);
-				
-				return "redirect:"+returnURL;
-			}
-			
-			return "redirect:loginIndex.do";
-			
+			System.out.println("회원정보 수정 성공");
+			//response.sendRedirect("login.do");
+			return "redirect:../index.jsp";
 		}else
 		{
-			System.out.println("비밀번호가 틀렸습니다.");
-			System.out.println("다시 입력하세요.");
-
-			return "login.jsp";
-		}	
+			System.out.println("회원정보 수정 실패");
+			//response.sendRedirect("login.do");
+			return "redirect:../index.jsp";
+		}
 	}
 	
 	@RequestMapping("/joinus/loginIndex.do")

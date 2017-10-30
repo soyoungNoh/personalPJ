@@ -12,6 +12,7 @@
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+
 $(document).ready(function(){
 	$("#addBtn").click(function(){
 		
@@ -26,6 +27,13 @@ $(document).ready(function(){
 		}else if($(".payTool").val()==""){
 			alert("모든 정보를 입력하세요 !");
 		}else{
+			
+			var rsvdate= "2017-"+$("#month").val()+"-"+$("#day").val();
+			$("#svdate").val(rsvdate);
+			
+			var expiredate= $("#mm").val()+"/"+$("#dd").val();
+			$("#expiredate").val(expiredate);
+			
 			var f = document.querySelector("form");
 			f.method="post";
 			f.submit();
@@ -62,7 +70,7 @@ HOST&nbsp&nbsp| &nbsp&nbsp${m.name}</p><br><br>
 <p class="subtilte">${g.name}</p>
 <hr class="dHr"><br><br>
 
-<form action="rsvAddProc.do?bName=${b.name}&bMid=${b.mid}">
+<form action="rsvAddProc.do?bName=${b.name}&bMid=${b.mid}" onsubmit="return validate()">
 <p class="subtilte">인원 추가</p>
 <p class="subtilte">아이  :  <input type="text" name="kidNum" class="add"/> &nbsp
 어른  :  <input type="text" name="adultNum" class="add"/></p>
@@ -70,8 +78,9 @@ HOST&nbsp&nbsp| &nbsp&nbsp${m.name}</p><br><br>
 
 <p class="subtilte">체험 날짜와 시간</p>
 <p style="font-size : 24px;">2017 년 
-<input type="text" name="month" class="add"/>월 &nbsp
-<input type="text" name="day" class="add"/>일
+<input type="text" name="month" class="add" id="month"/>월 &nbsp
+<input type="text" name="day" class="add" id="day"/>일
+<input type="hidden" name="svdate"/>
 <select name="time">
 <option value="" style="font-size : 24px;  color:#737373;">TIME</option>
 <option value="오전" style="font-size : 24px;  color:#737373;">오전</option>
@@ -95,8 +104,9 @@ HOST&nbsp&nbsp| &nbsp&nbsp${m.name}</p><br><br>
 
 <div class="cardForm">
 	<p class="subtilte">만료일</p>
-	<input type="text" class="cardBox" name="mm" value="MM"/>&nbsp&nbsp&nbsp
-	<input type="text" class="cardBox" name="yy" value="YY"/>
+	<input type="text" class="cardBox" name="mm" value="MM" id="mm"/>&nbsp&nbsp&nbsp
+	<input type="text" class="cardBox" name="yy" value="YY" id="yy"/>
+	<input type="hidden" name="expiredate"/>
 </div>
 <div class="cardForm2">
 	<p class="subtilte">보안 코드<br></p>

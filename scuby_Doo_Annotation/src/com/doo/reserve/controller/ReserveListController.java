@@ -8,9 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
+import com.doo.dao.BusinessDAO;
+import com.doo.dao.MemberDAO;
 import com.doo.dao.ReserveDAO;
 import com.doo.vo.Reserve;
 
@@ -18,10 +21,10 @@ public class ReserveListController implements Controller{
 	
 	private ReserveDAO rdao;
 
+	@Autowired
 	public void setRdao(ReserveDAO rdao) {
 		this.rdao = rdao;
 	}
-
 
 
 
