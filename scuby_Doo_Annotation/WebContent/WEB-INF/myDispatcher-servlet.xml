@@ -37,30 +37,30 @@
 		<property name="bdao" ref="businessDao"></property>		
 	</bean> -->
 	
-	<bean name="/myPage/memberList.do"
+<!-- 	<bean name="/myPage/memberList.do"
 		class="com.doo.myPage.controller.MemberListController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/myPage/myPage.do"
+	</bean> -->
+<!-- 	<bean name="/myPage/myPage.do"
 		class="com.doo.myPage.controller.MyPageController">
 		<property name="mdao" ref="memberDao"></property>
 		<property name="bdao" ref="businessDao"></property>
-	</bean>
-	<bean name="/myPage/delMemProc.do"
+	</bean> -->
+<!-- 	<bean name="/myPage/delMemProc.do"
 		class="com.doo.myPage.controller.DelMemProcController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/myPage/delMem.do"
+	</bean> -->
+<!-- 	<bean name="/myPage/delMem.do"
 		class="com.doo.myPage.controller.DelMemController">
-	</bean>
-	<bean name="/myPage/editMember.do"
+	</bean> -->
+<!-- 	<bean name="/myPage/editMember.do"
 		class="com.doo.myPage.controller.EditMemberController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
-	<bean name="/myPage/editMemProc.do"
+	</bean> -->
+<!-- 	<bean name="/myPage/editMemProc.do"
 		class="com.doo.myPage.controller.EditMemProcController">
 		<property name="mdao" ref="memberDao"></property>
-	</bean>
+	</bean> -->
 	
 	<bean name="/host/bManage.do"
 		class="com.doo.host.controller.BManageController">

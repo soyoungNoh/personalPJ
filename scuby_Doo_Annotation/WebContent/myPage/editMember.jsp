@@ -8,6 +8,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../joinus/join.css">
 <title>Welcome to Scuby.Doo!</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	function validate(){
+		var birthday= $("#year").val()+"-"+$("#month").val()+"-"+$("#day").val();
+		$("#birthday").val(birthday);
+			
+	}
+
+</script>
+
 </head>
 <body>
 
@@ -31,6 +44,7 @@
 	<td><input type="text" value="년도" name="year" class="bBox"/>
 	<input type="text" value="월" name="month" class="bBox"/>
 	<input type="text" value="일" name="day" class="bBox"/>
+	<input type="hidden" name="birthday" id="birthday"/>
 	</td>
 	</tr>
 	<tr>
