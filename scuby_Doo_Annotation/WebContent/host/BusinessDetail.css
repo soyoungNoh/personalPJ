@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: 'Noto Sans KR';
+}
+.header {
+	font-family: 'Noto Sans KR';
+	width: 600px;
+	float: right;
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.upper_menu {
+	float: right;
+	font-size: 16px;
+	margin: 20px 20px;
+	font-family: 'Noto Sans KR';
+}
+.mainBox {
+	margin: 50px 190px;
+}
+
+.bName{
+	font-size: 40px; font-weight: bold; color:#404040; 
+}
+
+.dHr{
+	color:#737373; width:67%; float:left;
+}
+.bLocation{
+	font-size: 24px; color:#737373; 
+}
+.pure-button{
+	float:right;
+}
+.scubaD{
+	width:400px; margin:0 10px; float:right;
+}
+.footerBox {
+	background-color: #000033; background-size: cover; 
+	width:100%; height:130px;
+}
+
+.footer {
+	padding: 30px 30px;
+	font-size: 15px;
+	color: #f2f2f2;
+}

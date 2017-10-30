@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.sist.controller"></context:component-scan>
+	
+	<bean name="memberDao" class="com.doo.dao.MemberDAO"></bean>
+	
+	<bean name="businessDao" class="com.doo.dao.BusinessDAO"></bean>
+	
+	<bean name="reserveDao" class="com.doo.dao.ReserveDAO"></bean>
+	
+<!-- 	<bean name="/joinus/login.do" 
+		class="com.doo.joinus.controller.LoginController">
+	</bean> -->
+	<bean name="/joinus/loginProc.do" 
+		class="com.doo.joinus.controller.LoginProcController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/logoutProc.do" 
+		class="com.doo.joinus.controller.LogoutProcController">
+	</bean>
+	<bean name="/joinus/join.do" 
+		class="com.doo.joinus.controller.JoinController">
+	</bean>
+	<bean name="/joinus/joinProc.do" 
+		class="com.doo.joinus.controller.JoinProcController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/joinus/loginIndex.do"
+		class="com.doo.joinus.controller.LoginIndexController">
+		<property name="bdao" ref="businessDao"></property>		
+	</bean>
+	
+	<bean name="/myPage/memberList.do"
+		class="com.doo.myPage.controller.MemberListController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/myPage/myPage.do"
+		class="com.doo.myPage.controller.MyPageController">
+		<property name="mdao" ref="memberDao"></property>
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/myPage/delMemProc.do"
+		class="com.doo.myPage.controller.DelMemProcController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/myPage/delMem.do"
+		class="com.doo.myPage.controller.DelMemController">
+	</bean>
+	<bean name="/myPage/editMember.do"
+		class="com.doo.myPage.controller.EditMemberController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/myPage/editMemProc.do"
+		class="com.doo.myPage.controller.EditMemProcController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	
+	<bean name="/host/bManage.do"
+		class="com.doo.host.controller.BManageController">
+		<property name="mdao" ref="memberDao"></property>
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/host/businessAdd.do"
+		class="com.doo.host.controller.BusinessAddController">
+		<property name="mdao" ref="memberDao"></property>
+	</bean>
+	<bean name="/host/businessAddProc.do"
+		class="com.doo.host.controller.BusinessAddProcController">
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/host/businessEdit.do"
+		class="com.doo.host.controller.BusinessEditController">
+		<property name="bdao" ref="businessDao"></property>
+		<property name="mdao" ref="memberDao"></property>		
+	</bean>
+	<bean name="/host/businessEditProc.do"
+		class="com.doo.host.controller.BusinessEditProcController">
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/host/businessDelProc.do"
+		class="com.doo.host.controller.BusinessDelProcController">
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/host/businessDetail.do"
+		class="com.doo.host.controller.BusinessDetailController">
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	
+	<bean name="/reserve/rsvList.do"
+		class="com.doo.reserve.controller.ReserveListController">
+		<property name="rdao" ref="reserveDao"></property>
+	</bean>
+	<bean name="/reserve/rsvPage.do"
+		class="com.doo.reserve.controller.ReservePageController">
+		<property name="mdao" ref="memberDao"></property>	
+		<property name="bdao" ref="businessDao"></property>
+	</bean>
+	<bean name="/reserve/rsvAddProc.do"
+		class="com.doo.reserve.controller.ReserveAddProcController">
+		<property name="rdao" ref="reserveDao"></property>
+	</bean>
+	<bean name="/reserve/stateUpdateProc.do"
+		class="com.doo.reserve.controller.StateUpdateProcController">
+		<property name="rdao" ref="reserveDao"></property>
+	</bean>
+	
+	<!-- <bean name="/util/stateUpdateProc.do"
+		class="com.doo.util.SdownloadContraller">
+		<property name="rdao" ref="reserveDao"></property>
+	</bean> -->
+	
+	
+	
+</beans>
